@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #273c75;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.container {
+    margin: 30px auto;
+    width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px #aaa;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+button {
+    background-color: #44bd32;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218c21;
+}
+.error {
+    color: red;
+}

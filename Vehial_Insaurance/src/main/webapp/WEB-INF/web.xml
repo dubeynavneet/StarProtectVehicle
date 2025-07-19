@@ -1,0 +1,84 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         version="3.1">
+    <display-name>StarProtectVehicle</display-name>
+
+    <welcome-file-list>
+        <welcome-file>jsp/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.servlet.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UnderwriterLoginServlet</servlet-name>
+        <servlet-class>com.servlet.UnderwriterLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UnderwriterLoginServlet</servlet-name>
+        <url-pattern>/underwriterLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddUnderwriterServlet</servlet-name>
+        <servlet-class>com.servlet.AddUnderwriterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUnderwriterServlet</servlet-name>
+        <url-pattern>/addUnderwriter</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>UpdateUnderwriterServlet</servlet-name>
+    <servlet-class>com.servlet.UpdateUnderwriterServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdateUnderwriterServlet</servlet-name>
+    <url-pattern>/updateUnderwriter</url-pattern>
+</servlet-mapping>
+ <servlet>
+    <servlet-name>DeleteUnderwriterServlet</servlet-name>
+    <servlet-class>com.servlet.DeleteUnderwriterServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DeleteUnderwriterServlet</servlet-name>
+    <url-pattern>/deleteUnderwriter</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>CreatePolicyServlet</servlet-name>
+    <servlet-class>com.servlet.CreatePolicyServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CreatePolicyServlet</servlet-name>
+    <url-pattern>/createPolicy</url-pattern>
+</servlet-mapping>
+<!-- web.xml -->
+
+<servlet>
+    <servlet-name>RenewPolicy</servlet-name>
+    <servlet-class>com.servlet.RenewPolicyServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>RenewPolicy</servlet-name>
+    <url-pattern>/renewPolicy</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>updatePolicyType</servlet-name>
+    <servlet-class>com.servlet.UpdatePolicyServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>updatePolicyType</servlet-name>
+    <url-pattern>/updatePolicyType</url-pattern>
+</servlet-mapping>
+
+</web-app>
+	
