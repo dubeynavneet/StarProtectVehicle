@@ -65,7 +65,7 @@
             <a href="jsp/underwriter/renewPolicy.jsp"><button>Renew Policy</button></a>
             <a href="jsp/underwriter/updatePolicy.jsp"><button>Update Policy Type</button></a>
             <a href="jsp/underwriter/viewPolicy.jsp"><button>View Policies</button></a>
-            <a href="Vehial_Insaurance/jsp/index.jsp"><button>Logout</button></a>
+            <a href="jsp/index.jsp"><button>Logout</button></a>
         </div>
     </div>
 </body>
