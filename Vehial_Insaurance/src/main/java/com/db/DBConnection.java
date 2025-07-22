@@ -14,10 +14,10 @@ public class DBConnection {
     public static Connection getConnection() throws SQLException {
         try {
             Class.forName("org.sqlite.JDBC"); // Load SQLite driver
-            System.out.println("Connecting to DB: " + new File("Test.db").getAbsolutePath());
+//            System.out.println("Connecting to DB: " + new File("Test.db").getAbsolutePath());
            
         } catch (ClassNotFoundException e) {
-        	System.out.print("Inside catch");
+//        	System.out.print("Inside catch");
             e.printStackTrace();
         }
         return DriverManager.getConnection(URL);
