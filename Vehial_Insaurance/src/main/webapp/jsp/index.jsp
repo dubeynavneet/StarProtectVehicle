@@ -125,6 +125,35 @@
             color: #b2bec3;
         }
 
+        /* Popup Modal */
+        #popupModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popupModal .modal-content {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            color: black;
+            text-align: center;
+        }
+
+        #popupModal .modal-content button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00c853;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 
     <script>
@@ -139,6 +168,24 @@
             } else {
                 document.getElementById('bikeBtn').classList.add('active');
             }
+        }
+
+        function handleCheckPrices(event) {
+            event.preventDefault(); // Stop form submission
+            const vehicleNumber = document.getElementById('vehicleNumber').value.trim();
+
+            if (vehicleNumber === "") {
+                alert("Please enter your vehicle number.");
+                return false;
+            }
+
+            // Show modal popup
+            document.getElementById('popupModal').style.display = 'flex';
+            return false;
+        }
+
+        function closeModal() {
+            document.getElementById('popupModal').style.display = 'none';
         }
     </script>
 </head>
@@ -167,8 +214,8 @@
         </div>
 
         <div class="form-section">
-            <form method="post" action="checkInsurance.jsp">
-                <input type="text" name="vehicleNumber" placeholder="Enter your vehicle number" required />
+            <form onsubmit="return handleCheckPrices(event);">
+                <input type="text" name="vehicleNumber" id="vehicleNumber" placeholder="Enter your vehicle number" required />
                 <input type="hidden" name="vehicleType" id="vehicleType" value="car" />
                 <button type="submit">Check Prices</button>
             </form>
@@ -177,6 +224,14 @@
 
     <div class="right-image">
         <img src="images/vehicle-hero.png" alt="Vehicle Insurance" />
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="popupModal">
+    <div class="modal-content">
+        <p style="font-size: 18px;">Please login to know better!</p>
+        <button onclick="closeModal()">Close</button>
     </div>
 </div>
 
